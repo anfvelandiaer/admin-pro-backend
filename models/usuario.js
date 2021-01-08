@@ -31,7 +31,7 @@ const UsuarioSchema = Schema({
 
 //Renombrar el _id a uid y quitar los atributos que no se quieren mostrar
 UsuarioSchema.method('toJSON', function() {
-    const{ __v, _id, pasword, ...object} = this.toObject();
+    const{ __v, _id, password, ...object} = this.toObject();
     object.uid = _id;
     return object;
 })
